@@ -1,0 +1,79 @@
+<style type="text/css">
+  body {
+    margin: 0;
+    font-family: Monaco;
+    mix-blend-mode: difference;
+    color: white;
+  }
+  @keyframes Crawl {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+  .gradient {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+      rgba(255, 255, 255, 1) 0%,
+      rgba(166, 193, 247, 1) 5%,
+      rgba(116, 163, 255, 1) 10%,
+      rgba(97, 140, 196, 1) 17%,
+      rgba(147, 142, 106, 1) 27%,
+      rgba(150, 136, 88, 1) 30%,
+      rgba(138, 37, 25, 1) 40%,
+      rgba(121, 28, 28, 1) 42%,
+      rgba(6, 13, 34, 1) 48%,
+      rgba(6, 9, 19, 1) 51%,
+      rgba(0, 0, 0, 1) 57%,
+      rgba(18, 7, 27, 1) 61%,
+      rgba(81, 76, 119, 1) 75%,
+      rgba(112, 147, 213, 1) 88%,
+      rgba(140, 181, 223, 1) 93%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background-size: 100% 10000%;
+    animation: Crawl 60s linear infinite alternate;
+  }
+  .title {
+    font-size: 10em;
+    mix-blend-mode: difference;
+  }
+</style>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<style type="text/css">
+  .CodeMirror {
+    background-color: rgba(0, 0, 0, 0);
+    width: 30vw;
+    mix-blend-mode: difference;
+    color: white;
+  }
+  .CodeMirror-cursor {
+    mix-blend-mode: difference;
+    border-left: 1px solid white;
+  }
+</style>
+
+<div class="gradient">
+  <textarea id="editor"></textarea>
+</div>
+<script>
+  new SimpleMDE({
+    element: document.getElementById("editor"),
+    toolbar: false,
+    status: false,
+  });
+</script>
