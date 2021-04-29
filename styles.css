@@ -46,7 +46,7 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
   background-size: 100% 10000%;
-  animation: Crawl 60s linear infinite alternate;
+  animation: Crawl 60s linear infinite normal;
 }
 
 a {
@@ -56,11 +56,11 @@ a {
 }
 
 p {
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
 }
 
 .title {
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   font-size: 3em;
 }
 
